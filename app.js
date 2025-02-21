@@ -92,11 +92,61 @@
 // })
 // console.log(yangi);
 
-let text = "Samarqand";
-let teskartext=[]
+// let text = "Samarqand";
+// let teskartext=[]
 
-for (let i = text.length-1; i >= 0; i--) {
-    teskartext += text[i]
+// for (let i = text.length-1; i >= 0; i--) {
+//     teskartext += text[i]
     
+// }
+// console.log(teskartext);
+
+
+
+// function drawTree(height) {
+//     for (let i = 1; i <= height; i++) {
+//         let spaces = " ".repeat(height - i);
+//         let stars = "*".repeat(2 * i - 1);
+//         console.log(spaces + stars);
+//     }
+// }
+
+// // Archa balandligini kiritamiz
+// drawTree(7);
+
+// let lists=[]
+
+// function toplamrandom(son){
+//     for (let index = 0; index < array.length; index++) {
+//         lists[index].push(Math.random(son))
+        
+//     }
+
+// }
+// console.log(lists);
+
+// function getRandomInt(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// lists.push(getRandomInt(3,6))
+
+// console.log(lists);
+
+let num = 5;
+
+function outer() {
+    let num = 10;
+
+    function inner() {
+        num += 5;
+        console.log('Внутри inner:', num);
+    }
+
+    inner();
+    console.log('После inner в outer:', num);
 }
-console.log(teskartext);
+
+console.log('Перед вызовом outer:', num);
+outer();
+console.log('После вызова outer:', num);
