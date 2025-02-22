@@ -133,20 +133,22 @@
 
 // console.log(lists);
 
-let num = 5;
+// let num = 5;
 
-function outer() {
-    let num = 10;
+// function outer() {
+//     let num = 10;
 
-    function inner() {
-        num += 5;
-        console.log('Внутри inner:', num);
-    }
+//     function inner() {
+//         num += 5;
+//         console.log('Внутри inner:', num);
+//     }
 
-    inner();
-    console.log('После inner в outer:', num);
-}
+//     inner();
+//     console.log('После inner в outer:', num);
+// }
 
-console.log('Перед вызовом outer:', num);
-outer();
-console.log('После вызова outer:', num);
+// console.log('Перед вызовом outer:', num);
+// outer();
+// console.log('После вызова outer:', num);
+
+
