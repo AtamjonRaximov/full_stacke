@@ -93,3 +93,22 @@ let uzb = {
 // 2) Urganch deb yozilsa axolisi yoki maydoni boyicha nechinchi o'rindaligini
 // chiqarishimiz kerak boladi
 // 3) telefonKodi yozilsa uzbekistan telefon kodi chiqishi kerak
+
+
+let userInput = prompt("So‘rov kiriting:").trim();
+
+
+if (userInput.toLowerCase() === "telefonkodi") {
+    alert(`O‘zbekiston telefon kodi: ${uzb.telefonKodi}`);
+} 
+
+
+else if (uzb.viloyatlari[userInput]) {
+    let v = uzb.viloyatlari[userInput];
+    alert(`Maydoni: ${v.maydon} km²\nAholisi: ${v.axolisi}\nMarkazi: ${v.markazi}`);
+} 
+
+else {
+    let found = Object.entries(uzb.viloyatlari).find(([vil, data]) => data.shaharlari.includes(userInput));
+    alert(found ? found[0] : "Bunday shahar yoki viloyat topilmadi.");
+}
