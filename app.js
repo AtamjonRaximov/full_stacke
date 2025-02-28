@@ -152,3 +152,21 @@
 // console.log('После вызова outer:', num);
 
 
+
+// let newli=document.querySelectorAll("li")
+
+// newli.forEach(item =>{
+//     item.textContent +=" darslar"
+    
+// })
+
+
+let lis =["Atamjon","diyorbekaka","alisher"]
+
+let ols =document.querySelector("ol")
+
+
+
+lis.forEach((nam) =>{
+    ols.innerHTML +=`<li>${lis}</li>`
+})
