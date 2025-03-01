@@ -161,12 +161,38 @@
 // })
 
 
-let lis =["Atamjon","diyorbekaka","alisher"]
+// let lis =["Atamjon","diyorbekaka","alisher"]
 
-let ols =document.querySelector("ol")
+// let ols =document.querySelector("ol")
 
 
 
-lis.forEach((nam) =>{
-    ols.innerHTML +=`<li>${lis}</li>`
-})
+// lis.forEach((nam) =>{
+//     ols.innerHTML +=`<li>${lis}</li>`
+// })
+
+
+let hisobla1 = document.querySelector(".input1");
+let hisobla2 = document.querySelector(".input2");
+let check = document.querySelector("#check");
+
+check.addEventListener("click", function () {
+    let n1 = new Date(hisobla1.value);
+    let n2 = new Date(hisobla2.value);
+
+    if (isNaN(n1) || isNaN(n2)) {
+        console.log("Iltimos, to'g'ri sana kiriting!");
+        return;
+    }
+
+    let farqKunlarda = Math.abs((n1 - n2) / (1000 * 60 * 60 * 24)); // Kun farqini olish
+
+    if (n1 > n2) {
+        console.log(`Men o'rtog'imdan ${farqKunlarda} kun katta man.`);
+    } else if (n1 < n2) {
+        console.log(`Men o'rtog'imdan ${farqKunlarda} kun kichik man.`);
+    } else {
+        console.log("Biz teng yoshdamiz!");
+    }
+});
+
