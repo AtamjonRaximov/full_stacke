@@ -97,11 +97,9 @@
 
 // for (let i = text.length-1; i >= 0; i--) {
 //     teskartext += text[i]
-    
+
 // }
 // console.log(teskartext);
-
-
 
 // function drawTree(height) {
 //     for (let i = 1; i <= height; i++) {
@@ -119,7 +117,7 @@
 // function toplamrandom(son){
 //     for (let index = 0; index < array.length; index++) {
 //         lists[index].push(Math.random(son))
-        
+
 //     }
 
 // }
@@ -151,48 +149,98 @@
 // outer();
 // console.log('После вызова outer:', num);
 
-
-
 // let newli=document.querySelectorAll("li")
 
 // newli.forEach(item =>{
 //     item.textContent +=" darslar"
-    
-// })
 
+// })
 
 // let lis =["Atamjon","diyorbekaka","alisher"]
 
 // let ols =document.querySelector("ol")
 
-
-
 // lis.forEach((nam) =>{
 //     ols.innerHTML +=`<li>${lis}</li>`
 // })
 
+// let hisobla1 = document.querySelector(".input1");
+// let hisobla2 = document.querySelector(".input2");
+// let check = document.querySelector("#check");
 
-let hisobla1 = document.querySelector(".input1");
-let hisobla2 = document.querySelector(".input2");
-let check = document.querySelector("#check");
+// check.addEventListener("click", function () {
+//     let n1 = new Date(hisobla1.value);
+//     let n2 = new Date(hisobla2.value);
 
-check.addEventListener("click", function () {
-    let n1 = new Date(hisobla1.value);
-    let n2 = new Date(hisobla2.value);
+//     if (isNaN(n1) || isNaN(n2)) {
+//         console.log("Iltimos, to'g'ri sana kiriting!");
+//         return;
+//     }
 
-    if (isNaN(n1) || isNaN(n2)) {
-        console.log("Iltimos, to'g'ri sana kiriting!");
-        return;
-    }
+//     let farqKunlarda = Math.abs((n1 - n2) / (1000 * 60 * 60 * 24)); // Kun farqini olish
 
-    let farqKunlarda = Math.abs((n1 - n2) / (1000 * 60 * 60 * 24)); // Kun farqini olish
+//     if (n1 > n2) {
+//         console.log(`Men o'rtog'imdan ${farqKunlarda} kun katta man.`);
+//     } else if (n1 < n2) {
+//         console.log(`Men o'rtog'imdan ${farqKunlarda} kun kichik man.`);
+//     } else {
+//         console.log("Biz teng yoshdamiz!");
+//     }
+// });
 
-    if (n1 > n2) {
-        console.log(`Men o'rtog'imdan ${farqKunlarda} kun katta man.`);
-    } else if (n1 < n2) {
-        console.log(`Men o'rtog'imdan ${farqKunlarda} kun kichik man.`);
-    } else {
-        console.log("Biz teng yoshdamiz!");
-    }
-});
+// let hisobla1 = document.querySelector("#n1").value;
+// let hisobla2 = document.querySelector("#n2").value;
+// let rang = document.querySelector("#color");
+// let aylan = document.querySelector("#aylan");
+// let tort = document.querySelector("#tort");
+// let tortburchak = document.querySelector("#tortburchak");
 
+// tort.addEventListener("click", function () {
+//     if (hisobla1 && hisobla2) {
+//         tortburchak.style.width = width + "px";
+//         tortburchak.style.height = height + "px";
+//         tortburchak.style.display = "block";
+//     } else {
+//         alert("Iltimos, width va height kiriting!");
+//     }
+
+
+
+
+
+ 
+// });
+
+// function t_yasa() {
+//     let n1 = document.getElementById("n1").value;
+//     let n2 = document.getElementById("n2").value;
+//     let tortburchak = document.getElementById("tortburchak");
+//     let rang = document.getElementById("rang").value;
+
+//     if (n1 && n2 && tortburchak) {
+//         tortburchak.style.width = n1 + "px";
+//         tortburchak.style.height = n2 + "px";
+//         tortburchak.style.display = "block";
+//         tortburchak.style.background=rang;
+   
+// }}
+// function a_yasa() {
+//     let n1 = document.getElementById("n1").value;
+//     let n2 = document.getElementById("n2").value;
+//     let rang = document.getElementById("rang").value;
+//     let aylana = document.getElementById("aylana");
+   
+
+
+//     if (n1 && n2 && rang) {
+//         aylana.style.width = n1 + "px";
+//         aylana.style.height = n2 + "px";
+//         aylana.style.display = "block";
+
+//         if (n1 && n2) {
+//             aylana.style.borderRadius = n1+n2+"px"; 
+//             aylana.style.background = rang; 
+//         }
+        
+//     } 
+// }
