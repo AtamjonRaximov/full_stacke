@@ -204,11 +204,6 @@
 //         alert("Iltimos, width va height kiriting!");
 //     }
 
-
-
-
-
- 
 // });
 
 // function t_yasa() {
@@ -222,15 +217,13 @@
 //         tortburchak.style.height = n2 + "px";
 //         tortburchak.style.display = "block";
 //         tortburchak.style.background=rang;
-   
+
 // }}
 // function a_yasa() {
 //     let n1 = document.getElementById("n1").value;
 //     let n2 = document.getElementById("n2").value;
 //     let rang = document.getElementById("rang").value;
 //     let aylana = document.getElementById("aylana");
-   
-
 
 //     if (n1 && n2 && rang) {
 //         aylana.style.width = n1 + "px";
@@ -238,9 +231,105 @@
 //         aylana.style.display = "block";
 
 //         if (n1 && n2) {
-//             aylana.style.borderRadius = n1+n2+"px"; 
-//             aylana.style.background = rang; 
+//             aylana.style.borderRadius = n1+n2+"px";
+//             aylana.style.background = rang;
 //         }
-        
-//     } 
+
+//     }
 // }
+
+// 1-masla
+
+// a =document.querySelectorAll("#parent > div")
+// let n ={}
+
+// a.forEach(elem => {
+//     n[elem.textContent] = elem.dataset.num
+
+// });
+
+// console.log(n);
+
+//2-masala
+
+// document.getElementById("toggleBtn").addEventListener("click", function () {
+//   let div = document.getElementById("one");
+//   div.style.display = div.style.display === "none" ? "block" : "none";
+// });
+
+
+// let art=document.querySelector("article")
+
+
+// Array.from(art.children).forEach((elem)=>{
+//     console.log(elem.classList.add("akajon"));
+    
+// })
+
+let t=document.querySelector("#tex")
+let p=document.querySelector("#pas")
+let n=document.querySelector("#num")
+let d=document.querySelector("#dat")
+let c=document.querySelector("#chec")
+let w=document.querySelector("#wek")
+let e=document.querySelector("#ema")
+let r=document.querySelector("#rad")
+let ra=document.querySelector("#ran")
+let re=document.querySelector("#res")
+let te=document.querySelector("#te")
+let ti=document.querySelector("#tim")
+let s=document.querySelector("#se")
+
+
+function t1(){
+    console.log("1)",t.type);
+    
+}
+function p2(){
+    console.log("2)",p.type);
+    
+}
+function n3(){
+    console.log("3)",n.type);
+    
+}
+function d4(){
+    console.log("4)",d.type);
+    
+}
+function chec5(){
+    console.log("5)",c.type);
+    
+}
+function week6(){
+    console.log("6)",w.type);
+    
+}
+function emai7(){
+    console.log("7)",e.type);
+    
+}
+function rad8(){
+    console.log("8)",r.type);
+    
+}
+function ran9(){
+    console.log("9)",ra.type);
+    
+}
+function res10(){
+    console.log("10)",re.type);
+    
+}
+function tel11(){
+    console.log("11)",te.type);
+    
+}
+function tim12(){
+    console.log("12)",ti.type);
+    
+}
+function se13(){
+    console.log("13)",s.type);
+    
+}

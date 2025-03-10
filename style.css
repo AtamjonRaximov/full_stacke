@@ -1,8 +1,8 @@
-.tortburchak{
-    border: solid;
-    width: 200px;
-    height: 50px;
-    display: none;
-    /* border-radius: ; */
+#one{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
 }
-
+.two{
+    display: none;
+}

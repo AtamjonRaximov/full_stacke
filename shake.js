@@ -65,27 +65,21 @@
 
 // 4-misol
 
-function adduser() {
-  let full_n=document.getElementById("fullname").value
-  let age=document.getElementById("age").value
-  let salary=document.getElementById("salary").value
-  let job=document.getElementById("job").value
+// function adduser() {
+//   let full_n=document.getElementById("fullname").value
+//   let age=document.getElementById("age").value
+//   let salary=document.getElementById("salary").value
+//   let job=document.getElementById("job").value
 
-  let r={
-    full_name:full_n,
-    age:age,
-    job:job,
-    salary:salary
-  }
+//   let r={
+//     full_name:full_n,
+//     age:age,
+//     job:job,
+//     salary:salary
+//   }
 
-  console.log(r);
-  
+//   console.log(r);
 
-  
-
-
-
-
-}
+// }
 
 
