@@ -1,0 +1,44 @@
+<input id="field" placeholder="Shahar nomini kiriting">
+<button id="submit">Enter</button>
+<div id="message"></div>
+<ul id="city-list"></ul>
+
+<script>
+    let input = document.querySelector('#field');
+    let message = document.querySelector('#message');
+    let cityList = document.querySelector('#city-list');
+    let submitBtn = document.querySelector('#submit');
+
+    let cities = [];
+    let lastLetter = ''; 
+
+    submitBtn.addEventListener('click', function() {
+        let city = input.value.trim().toLowerCase(); 
+
+        if (city === '') {
+            message.textContent = "Shahar nomini kiriting!";
+            return;
+        }
+
+        if (cities.includes(city)) {
+            message.textContent = " Bu shahar allaqachon aytilgan!";
+            return;
+        }
+
+        if (lastLetter && city[0] !== lastLetter) {
+            message.textContent = `Shahar '${lastLetter}' harfi bilan boshlanishi kerak!`;
+            return;
+        }
+
+        cities.push(city); 
+        lastLetter = city[city.length - 1]; 
+
+        let li = document.createElement("li");
+        li.textContent = city;
+        cityList.appendChild(li);
+
+        
+        input.value = ""; 
+        input.focus(); 
+    });
+</script>
