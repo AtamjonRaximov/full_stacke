@@ -257,79 +257,247 @@
 //   div.style.display = div.style.display === "none" ? "block" : "none";
 // });
 
-
 // let art=document.querySelector("article")
-
 
 // Array.from(art.children).forEach((elem)=>{
 //     console.log(elem.classList.add("akajon"));
-    
+
 // })
 
-let t=document.querySelector("#tex")
-let p=document.querySelector("#pas")
-let n=document.querySelector("#num")
-let d=document.querySelector("#dat")
-let c=document.querySelector("#chec")
-let w=document.querySelector("#wek")
-let e=document.querySelector("#ema")
-let r=document.querySelector("#rad")
-let ra=document.querySelector("#ran")
-let re=document.querySelector("#res")
-let te=document.querySelector("#te")
-let ti=document.querySelector("#tim")
-let s=document.querySelector("#se")
+// let t=document.querySelector("#tex")
+// let p=document.querySelector("#pas")
+// let n=document.querySelector("#num")
+// let d=document.querySelector("#dat")
+// let c=document.querySelector("#chec")
+// let w=document.querySelector("#wek")
+// let e=document.querySelector("#ema")
+// let r=document.querySelector("#rad")
+// let ra=document.querySelector("#ran")
+// let re=document.querySelector("#res")
+// let te=document.querySelector("#te")
+// let ti=document.querySelector("#tim")
+// let s=document.querySelector("#se")
+
+// function t1(){
+//     console.log("1)",t.type);
+
+// }
+// function p2(){
+//     console.log("2)",p.type);
+
+// }
+// function n3(){
+//     console.log("3)",n.type);
+
+// }
+// function d4(){
+//     console.log("4)",d.type);
+
+// }
+// function chec5(){
+//     console.log("5)",c.type);
+
+// }
+// function week6(){
+//     console.log("6)",w.type);
+
+// }
+// function emai7(){
+//     console.log("7)",e.type);
+
+// }
+// function rad8(){
+//     console.log("8)",r.type);
+
+// }
+// function ran9(){
+//     console.log("9)",ra.type);
+
+// }
+// function res10(){
+//     console.log("10)",re.type);
+
+// }
+// function tel11(){
+//     console.log("11)",te.type);
+
+// }
+// function tim12(){
+//     console.log("12)",ti.type);
+
+// }
+// function se13(){
+//     console.log("13)",s.type);
+
+// }
+
+// let yoz = document.getElementById("buttonga_yoz");
+// let chiqar_input = document.getElementById("chiqar_input");
+
+// function input_bos() {
+
+//   let qiymat = document.getElementById("inputt").value;
+
+//   if (qiymat) {
+//     if (qiymat) {
+//         let sum = parseInt(chiqar_input.value) || 0;
+//         if (qiymat == "hello") {
+//           yoz.innerText = qiymat;
+//           chiqar_input.value = sum + 10000;
+//         }
+//         else if (qiymat == "taxi") {
+//           yoz.innerText = qiymat;
+//           chiqar_input.value = sum + 15000;
+//         }
+//         else if (qiymat == "bus") {
+//           yoz.innerText = qiymat;
+//           chiqar_input.value = sum + 2000;
+//         }
+
+//       }
+// }}
+// function input_tozala(params) {
+//     chiqar_input.value = ""
+//     location.reload()
+
+// }
+
+// function input_yubor(params) {
+
+//     location.reload()
+
+// }
+
+// 1-masala
+// document.addEventListener("keydown", (e) => {
+//     if (e.key === "Escape") document.activeElement.blur();
+//     if (e.key === "Enter" && [document.querySelectorAll("input")].every(i => i.value.trim())) {
+//         e.preventDefault();
+//        let sent= document.getElementById("headerid").submit();
+//     }
+// });
+
+// 2-masala
+// document.addEventListener("keydown", function (event) {
+//   if (event.key.toLowerCase() === "a")
+//     document.getElementById("imga").style.display = "block";
+//   if (event.key.toLowerCase() === "s")
+//     document.getElementById("imgs").style.display = "block";
+//   if (event.key.toLowerCase() === "d")
+//     document.getElementById("imgd").style.display = "block";
+//   if (event.key.toLowerCase() === "w")
+//     document.getElementById("imgw").style.display = "block";
+// });
+
+// 3-masala
+// document.addEventListener("keydown", function(event) {
+//     let car = document.getElementById("car");
+//     let carLeft = car.offsetLeft;
+
+//     if (event.key === "a") {
+//         carLeft -= 50;
+//     }
+//     if (event.key === "d") {
+//         carLeft += 50;
+//     }
+//     if (event.key.toLowerCase() === "w") {
+//         let main = document.getElementById("maina");
+//         // main.style.animation = "moveMain 1s linear infinite";
+//     }
+
+//     car.style.left = carLeft + "px";
+// });
+
+// 4-masala
+// let range = document.getElementById("range");
+
+// document.addEventListener("wheel", function(event) {
+//     let size = parseInt(range.value);
+
+//     if (event.deltaY < 0) {
+//         size += 5;
+//     } else {
+//         size -= 5;
+//     }
+
+//     if (size < 10) size = 10;
+//     if (size > 200) size = 200;
+
+//     range.value = size;
+//     dot.style.width = size + "px";
+//     dot.style.height = size + "px";
+// });
+
+// 5-masala
+// let timer = document.getElementById("timer");
+// let startPauseBtn = document.getElementById("startPause");
+
+// let time = 0;
+// let running = false;
+// let interval;
+
+// function updateTimer() {
+//   time += 0.01;
+//   timer.textContent = time.toFixed(2);
+// }
+
+// function toggleTimer() {
+//   if (running) {
+//     clearInterval(interval);
+//     startPauseBtn.textContent = "Start";
+//   } else {
+//     interval = setInterval(updateTimer, 10);
+//     startPauseBtn.textContent = "Pause";
+//   }
+//   running = !running;
+// }
+
+// function resetTimer() {
+//   clearInterval(interval);
+//   time = 0;
+//   timer.textContent = "0";
+//   startPauseBtn.textContent = "Start";
+//   running = false;
+// }
+
+// startPauseBtn.addEventListener("click", toggleTimer);
+
+// document.addEventListener("keydown", function (event) {
+//   if (event.code === "Space") {
+//     toggleTimer();
+//     event.preventDefault();
+//   }
+//   if (event.ctrlKey) {
+//     resetTimer();
+//   }
+// });
 
 
-function t1(){
-    console.log("1)",t.type);
-    
-}
-function p2(){
-    console.log("2)",p.type);
-    
-}
-function n3(){
-    console.log("3)",n.type);
-    
-}
-function d4(){
-    console.log("4)",d.type);
-    
-}
-function chec5(){
-    console.log("5)",c.type);
-    
-}
-function week6(){
-    console.log("6)",w.type);
-    
-}
-function emai7(){
-    console.log("7)",e.type);
-    
-}
-function rad8(){
-    console.log("8)",r.type);
-    
-}
-function ran9(){
-    console.log("9)",ra.type);
-    
-}
-function res10(){
-    console.log("10)",re.type);
-    
-}
-function tel11(){
-    console.log("11)",te.type);
-    
-}
-function tim12(){
-    console.log("12)",ti.type);
-    
-}
-function se13(){
-    console.log("13)",s.type);
-    
-}
+
+// 6-masala
+document.addEventListener("keydown", function(event) {
+    let keyMap = {
+        "A": "C",
+        "W": "C#",
+        "S": "D",
+        "E": "D#",
+        "D": "E",
+        "F": "F",
+        "T": "F#",
+        "G": "G",
+        "Y": "G#",
+        "H": "A",
+        "U": "A#",
+        "J": "B"
+    };
+
+    let note = keyMap[event.key.toUpperCase()];
+    if (note) {
+        let audio = document.getElementById(note);
+        if (audio) {
+            audio.pause();
+            audio.currentTime = 0;
+            audio.play().catch(error => console.log("Audio o‘ynashga ruxsat yo‘q:", error));
+        }
+    }
+});

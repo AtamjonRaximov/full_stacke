@@ -1,0 +1,158 @@
+/* 1-masala */
+/* header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button{
+        width: 170px;
+        border-radius: 25px;
+        border: none;
+        background-color: green;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+} */
+
+/* 2-masala */
+/* header{
+    width: 420px;
+    padding: 10px;
+    display: flex;
+    border: solid;
+    flex-wrap: wrap;
+    gap: 10px;
+    .child{
+        border: solid;
+        img{
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+    }
+} */
+
+/* 3-masala */
+/* header {
+  position: relative;
+  width: 420px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  gap: 10px;
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .child {
+      width: 5px;
+      background-color: wheat;
+      height: 10px;
+
+      border: solid;
+    }
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    position: absolute;
+    left: 50%;
+    width: 10px;
+
+    animation: harakat 1s linear infinite;
+    .child {
+      width: 5px;
+      background-color: wheat;
+      height: 10px;
+
+      border: solid;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .child {
+      width: 5px;
+      background-color: wheat;
+      height: 10px;
+
+      border: solid;
+    }
+  }
+
+  .car {
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background-color: red;
+    top: 566px;
+    left: 200px;
+  }
+}
+@keyframes harakat {
+  from {
+    top: -100vh;
+  }
+  to {
+    top: 100px;
+  }
+} */
+
+/* 4-masala */
+/* input[type="range"] {
+    width: 300px;
+} */
+ /* 5-masala */
+ /* .timer {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+} */
+
+/* 6-masala */
+.piano {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.key {
+    width: 60px;
+    height: 200px;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.key:active {
+    transform: scale(0.9);
+    background-color: lightgray;
+}
+
+.black-key {
+    height: 120px;
+    width: 40px;
+    background-color: rgb(204, 2, 2);
+    color: rgb(14, 197, 23);
+    margin-left: -20px;
+    margin-right: -20px;
+    z-index: 1;
+    position: relative;
+}

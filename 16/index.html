@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Example</title>
+    <style>
+        #dragItem {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: grab;
+        }
+
+        #dropZone {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed black;
+            text-align: center;
+            line-height: 200px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="dragItem" draggable="true">Drag me</div>
+    <div id="dropZone">Drop here</div>
+
+    <script>
+        let dragItem = document.getElementById("dragItem");
+        let dropZone = document.getElementById("dropZone");
+
+        // `dragstart` - sudralayotgan element haqida ma’lumot saqlash
+        dragItem.addEventListener("dragstart", function(event) {
+            event.dataTransfer.setData("text", event.target.id); // Element ID sini saqlash
+        });
+
+        // `dragover` - drop qilishga ruxsat berish uchun `preventDefault()`
+        dropZone.addEventListener("dragover", function(event) {
+            event.preventDefault();
+            dropZone.style.backgroundColor = "lightgray"; // Ko‘rinishini o‘zgartirish
+        });
+
+        // `dragleave` - drop joyidan tashqariga chiqib ketganda
+        dropZone.addEventListener("dragleave", function() {
+            dropZone.style.backgroundColor = "white";
+        });
+
+        // `drop` - element tashlanganda
+        dropZone.addEventListener("drop", function(event) {
+            event.preventDefault();
+            let draggedElementId = event.dataTransfer.getData("text"); // Sudralayotgan element ID sini olish
+            let draggedElement = document.getElementById(draggedElementId);
+            dropZone.appendChild(draggedElement); // Elementni dropZone ichiga qo‘yish
+            dropZone.style.backgroundColor = "green";
+            dropZone.innerText = "Dropped!";
+        });
+    </script>
+
+</body>
+</html>
