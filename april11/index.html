@@ -1,0 +1,57 @@
+<style>
+    div {
+        width: 300px;
+        margin:  0 auto;
+        padding: 10px 20px;
+    }
+</style>
+<div>
+    <input type="text" placeholder="User id">
+    <p>Message from: <span id="first_name"></span>
+    </p>    
+    <p>Message text: <span id="message_text"></span></p>
+    <hr>
+    <p id="p">
+        
+    </p>
+</div>
+<script>
+
+
+getData()
+async function getData() {
+    try {
+        let response = await fetch('https://api.telegram.org/bot7612630515:AAE35x7wACpHjDoId8TNBcP0ZJiZOO5pq8s/getUpdates')
+        let data = await response.json()
+
+
+
+        let inp = document.querySelector('input')
+    inp.addEventListener('keyup', () => {
+        document.querySelector('#first_name').textContent = data['result'][inp.value]['message']['from']['first_name'] + " " + data['result'][inp.value]['message']['from']['last_name']
+        document.querySelector('#message_text').textContent = data['result'][inp.value]['message']['text']
+
+    })
+    let info = data['result']
+    let id = 0
+    info.forEach(items => {
+
+        let span = document.createElement('p')
+        document.querySelector('#p').appendChild(span).textContent = `
+        User id: ${id},
+        User name: ${items['message']['from']['first_name']},
+        User message: ${items['message']['text']}
+        `
+        
+        id++
+    });
+    console.log(data['result']);
+
+
+
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+</script>
